@@ -1,12 +1,11 @@
-var xhr = new XMLHttpRequest();
+// ---------------- Variables --//
+var username;
+var highscore;
 
-xhr.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-        document.getElementById("data").innerHTML = this.responseText;
-
-    }
-};
-
-xhr.open("GET", "https://opentdb.com/api.php?amount=10&category=21&difficulty=medium");
-
-xhr.send();
+const nameInput = document.querySelector("#username");
+const usernameDiv = document.querySelector("#username-container");
+const startGame = document.querySelector('#start-game');
+const categoryDropdown = document.querySelector('#category-selector');
+const categoryOptions = document.querySelector('.category-option');
+const levelDropdown = document.querySelector('#level-selector');
+const levelOptions = document.querySelector('.level-option');

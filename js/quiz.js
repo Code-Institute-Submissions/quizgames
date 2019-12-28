@@ -1,4 +1,4 @@
-//-------------- API configuration --//
+//-------------- API configuration 
 
 const baseURL = "https://opentdb.com/api.php?amount=10&category=21&difficulty=medium";
 

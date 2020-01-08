@@ -62,7 +62,7 @@ if (localStorage.getItem("category") === null) {
 
 //Choose your category from the dropdown menu
 categoryOptions.forEach(option => {
-    if (option.value === level) {
+    if (option.value === category) {
         option.setAttribute("selected", "");
     } else {
         option.removeAttribute("selected")
@@ -71,7 +71,7 @@ categoryOptions.forEach(option => {
 
 // Update Category value if changed
 categoryDropdown.addEventListener('change', (e) => {
-    localStorage.setItem("level", e.path[0].value);
+    localStorage.setItem("category", e.path[0].value);
 });
 
 //----------------------Level

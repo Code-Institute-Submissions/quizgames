@@ -17,6 +17,10 @@
 </head>
 
 <body>
+
+	<!-- Midsection -->
+<section id="top-section">
+    <div>
     <nav class="navbar navbar-expand-lg navbar-light bg-secondary">
 				<a class="navbar-brand" href="index.html">WishQuiz</a>
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -31,46 +35,32 @@
 					</div>
 				</div>
 			</nav>
-
-    <section id="top-section">
-        <div class="col-12">
-            <div class="row">
-                <div class="col-4"> 
-                    <div class="col-6">Username:</div>
-                    <div id="usernameBox" class="col-6">
-                    <h3> </h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="col-6">Correct Answers:</div> 
-                    <div id="correctAnswerBox" class="col-6"></div> 
-                </div>
-                <div  class="col-4"> 
-                    <div class="col-6"></div>Score:
-                    <div id="scoreBox" class="col-6"></div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-	<!-- Midsection -->
-    <section id="midsection">
-        <div class="container">
-            <div id="qBox" class="col-8 offset-2">QuestionBox
-            </div>
-            <div id="answer1" class="col-8 offset-2">Answer#1
-            </div>
-            <div id="answer2" class="col-8 offset-2">Answer#2
-            </div>
-            <div id="answer3" class="col-8 offset-2">Answer#3
-            </div>
-            <div id="answer4" class="col-8 offset-2">Answer#4
-            </div>
-        </div>
-    </section>
-
-
-
+    </div>
+</section>
+	<div>
+		<h1>Welcome to Wish Quiz</h1>
+		<div id="username-container" class="text-center">
+			<h3>Please choose a username</h3>
+			<div>
+				<input id="username" class="form-control" type="text" placeholder="Username goes here..." 
+                aria-label="username" name="username" id="username">
+			</div>
+		</div>
+		<select id="category-selector" class="form-control custom-select">
+            <option class="category-option" value="defaultSelect">Default select</option>
+            <option onclick="writeToDocument('9')">General</option>
+            <option onclick="writeToDocument('21')">Sports</option>
+            <option onclick="writeToDocument('23')">History</option>
+            <option onclick="writeToDocument('26')">Celebs</option>
+            <option onclick="writeToDocument('24')">Politics</option>
+        </select>
+		<select id="level-selector" class="form-control custom-select">
+            <option class="level-option" value="easy">Easy</option>
+            <option class="level-option" value="medium">Medium</option>
+            <option class="level-option" value="hard">Hard</option>
+        </select>
+        <a href="quiz.html" id="start-game" class="btn btn-warning">Start Quiz</a>
+	</div>
 
 
 		<!-- bs4 js scripts -->
@@ -83,8 +73,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 		</script>
-		<!-- quiz js script -->
-        <script src="js/quiz.js"></script>
+		<!-- main js script -->
+		<script src="js/main.js"></script>
 		
 </body>
 

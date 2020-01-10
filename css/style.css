@@ -1,0 +1,27 @@
+body {
+    background-color: #2b2d2f;
+    color: #f0a90a;
+}
+
+
+
+/*---------------- Game Board styling ----*/
+.stat-box {
+    background-color: #f0a90a;
+    color: #2b2d2f;
+    border: 8px solid #ffb400;
+    height: 75px;
+    margin-top: 8%;
+    
+}
+.game-bord-styling {
+    background-color: #f0a90a;
+    color: #2b2d2f;
+    border: 8px solid #ffb400;
+    max-width: 100%;
+    height: 75px;
+    margin-top: 8%;
+    text-align: center;
+    vertical-align: baseline;
+}
+

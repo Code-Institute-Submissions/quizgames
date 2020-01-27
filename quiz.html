@@ -16,11 +16,10 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body> 
 	<section id="top-secion">
-		<!-- Navbar from Bootstrap -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">WishQuiz.com</a>
+			<a class="navbar-brand" href="index.html">WishQuiz.com</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -39,34 +38,27 @@
 			</div>
 		</nav>
 	</section>
-	<section id="mid-section">
+	<section>
 		<div class="container">
 			<div class="col-8 offset-2">
-				<input id="username" type="text" name="username" value="" class="form-control box-styling" placeholder="Username" aria-label="username" aria-describedby="basic-addon1">
-		    </div>
-<!--
-				<div id="difficulty" class="col-8 offset-2 dropdown box-styling">
-							<button onclick="myFunction()" class="dropbtn">Dropdown</button>
-							<div id="myDropdown" class="dropdown-content">
-								<a href="#">Easy</a>
-								<a href="#">Medium</a>
-								<a href="#">Hard</a>
-							</div>	
+				<div class="row user-stats">
+                    <div id="usernameBox" class="col-4 stat-box-styling">Username:</div>
+                    <div id="correct-answers" class="col-4 stat-box-styling">Correct answers:</div>
+                    <div id="score-box" class="col-4 stat-box-styling">Score</div>
 				</div>
--->
+                <div id="qbox" class="game-bord-styling-q">
+                    <div id="qtext">Question goes here</div>
+                </div>
+				<div id="gameboard" class="game-board-outer bg-dark">
+					<div id="answer1" class="game-bord-inner game-bord-styling">Answer-1</div>
+					<div id="answer2" class="game-bord-inner game-bord-styling">Answer-2</div>
+					<div id="answer3" class="game-bord-inner game-bord-styling">Answer-3</div>
+					<div id="answer4" class="game-bord-inner game-bord-styling">Answer-4</div>
 
-				<div class="col-8 offset-2">
-					<div id="difficulty" class="box-styling">Category
-					</div>
 				</div>
 			</div>
-			<a href="quiz.html">
-				<button class="button-send" id="button-send" type="multiStorage" onclick="localStorage.getItem('localStorageMulti');">Play</button></a>
-
-
-			<a href="quiz.html">Press here</a>
+		</div>
 	</section>
-	<div id="data"></div>
 	<footer>
 	</footer>
 	<!-- bs4 js scripts -->
@@ -79,8 +71,8 @@
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 	</script>
-	<!-- main js script -->
-	<script src="js/main.js"></script>
+	<!-- Quiz js script -->
+	<script src="js/quiz.js"></script>
 
 </body>
 

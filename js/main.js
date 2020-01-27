@@ -2,45 +2,62 @@ console.log("Hello hello World, Testing my .js file!!!");
 
 /*-------------- Variables ---------*/
 var username;
-var level;
-var category;
+// var level;
+// var category;
 
+
+// Constants
+const nameInput = document.querySelector("#username");
+const startQuiz = document.querySelector("#start-quiz");
 
 /*-------------- Function --------*/
 // Check if Local Storage is available
-function localStorageCheck() {
-    var lsc = 'check';
+function localStorageTest() {
+    var lst = 'test';
     try {
-        localStorage.setItem(lsc, lsc);
-        localStorage.removeItem(lsc);
+        localStorage.setItem(lst, lst);
+        localStorage.removeItem(lst);
         return true;
     } catch(e) {
-        alert ("Sorry Local Storage is not available at the moment! Please refresh your browser or try again later.");  
+        return false; 
     }
 }
 
-if(localStorageCheck() === true) {
+if(localStorageTest() === true) {
     // Available
 }else{
-    //Unavailable
+    Alert ("Local Storage is unavailable, please refresh your browser or try again later");
 }
 
-// Setting three value to the local storage
-function localStorageMulti() {
-    localStorage.setItem('username', '');
-    localStorage.setItem('category', '');
-    localStorage.setItem('level', '');
-    localStorage.removeItem('');
+/*---------------------Username------*/
+// check if username is in localStorage
+
+if(localStorage.getItem("username") === null) {
+    nameInput.value = "";
+} else {
+    nameInput.value = localStorage.getItem("username");
 }
+
+//Update localStorage with username from input
+
+nameInput.addEventListener("keyup", () => {
+    if (nameInput.value === "") {
+        localStorage.removeItem("username");
+    } else {
+        localStorage.setItem("username", nameInput.value);
+    }
+});
+
 
 /*--------------W3 School code ------*/
 
 /* When the user clicks on the button,
-toggle between hiding and showing the dropdown content */
+toggle between hiding and showing the dropdown content 
 function myFunction() {
   document.getElementById("myDropdown").classList.toggle("show");
 }
-
+*/
+/*
 // Close the dropdown menu if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -54,3 +71,4 @@ window.onclick = function(event) {
     }
   }
 }
+*/

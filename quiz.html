@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
-<body> 
+<body onload="dqa()">
 	<section id="top-secion">
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<a class="navbar-brand" href="index.html">WishQuiz.com</a>
@@ -40,26 +40,43 @@
 	</section>
 	<section>
 		<div class="container">
-			<div class="col-8 offset-2">
-            <!--------------------------Stat boxes----------------------------->
+			<div class="col-xs-12 col-lg-8 offset-lg-2">
+				<!--------------------------Stat boxes----------------------------->
 				<div class="row user-stats">
-                    <div id="usernameBox" class="col-4 stat-box-styling"></div>
-                    <div id="correctAnswers" class="col-4 stat-box-styling">Correct answers:</div>
-                    <div id="scoreBox" class="col-4 stat-box-styling">Score</div>
-				</div>
-            <!--------------------------Quiz Games/ Game board----------------->
-                <div id="qbox" class="game-bord-styling-q">
-                    <div id="qtext">Question goes here</div>
-                </div>
-				<div id="gameboard" class="game-board-outer bg-dark">
-					<div id="answer1" class="game_bord_inner game-bord-styling">Answer-1</div>
-					<div id="answer2" class="game_bord_inner game-bord-styling">Answer-2</div>
-					<div id="answer3" class="game_bord_inner game-bord-styling">Answer-3</div>
-					<div id="answer4" class="game_bord_inner game-bord-styling">Answer-4</div>
+					<div id="usernameBox" class="col-4 stat-box-styling"></div>
+					<div id="correctAnswers" class="col-4 stat-box-styling">Wins<br>
+						<h3>0</h3>
+					</div>
+					<div id="scoreBox" class="col-4 stat-box-styling">Score<br>
+						<h3>0</h3>
+					</div>
 
+				</div>
+				<!--------------------------Quiz Games/ Game board----------------->
+				<div id="gameboard">
+					<div id="qBox" class="game-bord-styling-q">
+						<div id="qtext">
+							<h3> </h3>
+						</div>
+					</div>
+					<div class="game-board-outer bg-dark">
+						<div id="game_bord_inner">
+                            <button type="button" onclick="checkAnswer('a')" name="question${questionNumber}" id="answer1" class="game-bord-styling"></button>
+                            <button type="button" onclick="checkAnswer('b')" name="question${questionNumber}" id="answer2" class="game-bord-styling"></button>
+                            <button type="button" onclick="checkAnswer('c')" name="question${questionNumber}" id="answer3" class="game-bord-styling"></button>
+                            <button type="button" onclick="checkAnswer('d')" name="question${questionNumber}" id="answer4" class="game-bord-styling"></button>
+                            
+                            <!-- <input type="button" name="question${questionNumber}" value="${letter}" id="answer1" class="game-bord-styling"> -->
+							<!-- <input type="button" onclick="checkAnswer('a')" name="question${questionNumber}" value="${letter}" id="answer2" class="game-bord-styling">
+                            <input type="button" onclick="checkAnswer('a')" name="question${questionNumber}" value="${letter}" id="answer3" class="game-bord-styling">
+                            <input type="button" onclick="checkAnswer('a')"  name="question${questionNumber}" value="${letter}" id="answer4" class="game-bord-styling"> -->
+                            </div>
+					</div>
 				</div>
 			</div>
 		</div>
+		<div id="data"></div>
+
 	</section>
 	<footer>
 	</footer>

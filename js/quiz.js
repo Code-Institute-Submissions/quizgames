@@ -1,7 +1,8 @@
 console.log("Hello World!");
 
 /*----- Variables -----*/
-var score = 0; // The start score
+var score = 0; // Start score
+var wins = 0;  // Start win
 var username;
 var allQ = 10; // The total number of question in one game
 var qNum = 0;  // Question number 
@@ -11,8 +12,8 @@ var qtext = document.querySelector('#qtext');
 /*------------------------------------ Constants ----*/
 /*------------ Constants Stat boxes ------*/
 const usernameBox = localStorage.getItem(username)
-const correctAnswers = document.querySelector('#correctAnswers');
-const scoreBox = document.querySelector('#scoreBox > h2');
+const winBox = document.querySelector('#winBox');
+const scoreBox = document.querySelector('#scoreBox > h3');
 
 /*------------ Constants Quiz Board ------*/
 const gameboard = document.querySelector('gameboard');
@@ -85,32 +86,70 @@ function dqa() {
   //  document.getElementById()
 
 }
-
-
+/*---------- Working code 
 function checkAnswer(letter){
     console.log(letter);
     if(allQuestions[qNum].correct_answer == letter){
-        alert('You got it right!');
         qNum++;
         dqa();
-        return true;
     } else {
         qNum++;
         dqa();
-        return false;
     }
 }
+---------*/
 
-/*-- function userAnswer(callback) {
-    var letter = alert('You got it right!');
-    callback(letter);
+/*------- Check answer and update score ---------*/
+function updateScore(score) {
+    scoreBox.innerHTML = "<h3>" + score + "</h3>"
 }
 
-userAnswer(); ---*/
+function checkAnswer(letter, callback){
+    if(allQuestions[qNum].correct_answer == letter){
+        reward;
+        qNum++;
+        dqa();
+    } else {
+        qNum++;
+        dqa();
+    }
+    callback(score);
+}
+
+checkAnswer()
 
 //     END OF TUTOR CALL ANSWERS
 
-function updateScore() {
+/*----
+
+function updateScore(callback) {
+    var correctAnswer = score += Math.round(score + reward);
+    score++;
+}
+
+correctAnswer(checkAnswer);
+
+
+--------*/
+
+/*-------- 
+
+function correctAnswer(callback) {
+    if(checkAnswer(letter) === true) {
+    score += Math.round(score + reward);
+    score++;
+    callback(score);
+    }
+    console.log(callback(score));
+    
+}
+
+// correctAnswer(myScore);
+
+-------*/
+
+/*---   
+function updateScore(score) {
     if(checkAnswer(letter) === true) {
         console.log("returned True")
         score += Math.round(score + reward);

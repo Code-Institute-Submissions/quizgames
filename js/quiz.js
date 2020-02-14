@@ -1,10 +1,11 @@
-console.log("Hello hello World!");
+console.log("Hello World!");
 
 /*----- Variables -----*/
 var score = 0; // Start score
 var username;
 var qNum = 0;  // Question number 
 var qtext = document.querySelector('#qtext');
+var wins = 0;
 
 
 /*------------------------------------ Constants ----*/
@@ -70,7 +71,7 @@ const allQuestions = [
         correct_answer: "c"
     },
     {
-        questions: "What is the name of the first know cryptocurrency?",
+        questions: "What is the name of the first known cryptocurrency?",
         answers: {
             a: "Ripple",
             b: "Dash",
@@ -80,7 +81,7 @@ const allQuestions = [
         correct_answer: "d"
     },
     {
-        questions: "What of the following names are a computerbrand?",
+        questions: "What is a computerbrand name?",
         answers: {
             a: "Axe",
             b: "Zippy",
@@ -158,9 +159,7 @@ function dqa() {
 
 /*------- Check answer and update score ---------*/
 
-function scoreBoard(score) {
-    scoreBox.innerHTML = "<h3>" + score + "</h3>"
-}
+
 
 function checkAnswer(letter, callback){
     console.log(letter);
@@ -168,38 +167,52 @@ function checkAnswer(letter, callback){
         alert('You got it right!');
         score += reward;
         scoreBoard(score);
+        updateWins(wins);
         qNum++;
         dqa();
+        gameOver();
     } else {
         qNum++;
         dqa();
     }
     callback(letter);
 }
+
+//---------------Update stats ----------*/
 // ---- Update score
+function scoreBoard(score) {
+    scoreBox.innerHTML = "<h3>" + score + "</h3>"
+}
+
 function updateScore(score, reward) {
     console.log(score + reward);
 }
 
 // ----- Update Wins
-function updateWins() {
-    var wins = score / 100;
+
+function updateWins(wins) {
+    wins = parseInt(score) / 100;
     winBox.innerHTML = "<h3>" + wins + "</h3>"
+    console.log(score / 100);
 }
 
-updateWins(score/100);
-
 /*-------------- Game Over -------------*/ 
-const gameOverSum = document.querySelector('#game-over-sum');
-const gameOverScore = document.querySelector('#game-over-score');
+const gameOverSum = document.querySelector('#gameOverSum');
+const gameOverScore = document.querySelector('#gameOverScore');
 
 function endGame() {
-    if (allQuestions[qNum].questions ===  - 1) {
+   gameOverSum.classList.remove("hidden");
+   gameboard.classList.add("hidden");
+   gameOverScore.innerHTML = "<h3>" + "Your score is:" + score + "</h3>";
+}
+
+var qMax = 10;
+
+function gameOver() {
+     if (allQuestions[qNum].questions === questions - 1) {
         endGame();
     } else {
         qNum++;
         dqa();
     }
 }
-
-

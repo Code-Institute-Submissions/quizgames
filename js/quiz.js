@@ -15,7 +15,7 @@ const scoreBox = document.querySelector('#scoreBox > h3');
 const qNumBox = document.querySelector('#qNumBox > h3');
 
 /*------------ Constants Quiz Board ------*/
-const gameboard = document.querySelector('gameboard');
+const gameboard = document.querySelector('#gameboard');
 const qBox = document.querySelector('#qbox');
 const a = document.querySelector('#answer1');
 const b = document.querySelector('#answer2');
@@ -24,8 +24,8 @@ const d = document.querySelector('#answer4');
 const allAnswers = [a, b, c, d];
 
 //-------- Game over Const ----------*/
-const gameOverSum = document.getElementById('#gameOverSum');
-const gameOverScore = document.getElementById('#gameOverScore > h3');
+const gameOverSum = document.querySelector('#gameOverSum');
+const gameOverScore = document.querySelector('#gameOverScore > h3');
 
 /*------------- Const rewards --------*/
 const reward = 100;
@@ -56,7 +56,7 @@ function updateWins(wins) {
 function endGame() {
    gameOverSum.classList.remove("invisible");
    gameboard.classList.add("invisible");
-   gameOverScore.innerHTML = "<h3>" + "Your score is:" + score + "</h3>";
+   gameOverScore.innerHTML = score;
 }
 
 /*--------- Display Questions and Answers ---------*/
@@ -72,7 +72,7 @@ function dqa() {
         document.getElementById("answer2").innerHTML = "<h3>" + allQuestions[qNum].answers["b"] + "</h3>"
         document.getElementById("answer3").innerHTML = "<h3>" + allQuestions[qNum].answers["c"] + "</h3>"
         document.getElementById("answer4").innerHTML = "<h3>" + allQuestions[qNum].answers["d"] + "</h3>"
-        console.log(qtext);
+    //    console.log(qtext);
     }
 }
 

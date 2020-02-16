@@ -3,6 +3,11 @@ body {
     color: #f0a90a;
 }
 
+/*------ Navbar Styling -------*/
+a.navbar-brand {
+    color: #f0a90a;
+}
+
 /*-----------Background image------------*/
 .background-img {
   background: url("/assets/images/cover.jpeg") no-repeat center center fixed; 

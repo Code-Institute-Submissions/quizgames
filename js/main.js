@@ -1,14 +1,10 @@
-console.log("Hello hello World, Testing my .js file!!!");
+// console.log("Hello hello World, Testing my .js file!!!");
 
 /*-------------- Variables ---------*/
 var username;
-// var level;
-// var category;
-
 
 // Constants
 const nameInput = document.querySelector("#username");
-const startQuiz = document.querySelector("#start-quiz");
 
 /*-------------- Function --------*/
 // Check if Local Storage is available

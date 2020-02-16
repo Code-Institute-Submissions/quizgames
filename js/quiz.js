@@ -1,4 +1,4 @@
-console.log("Hello World!");
+// console.log("Hello World!");
 
 /*----- Variables -----*/
 var score = 0; // Start score
@@ -6,7 +6,6 @@ var username;
 var qNum = 0;  // Question number 
 var qtext = document.querySelector('#qtext');
 var wins = 0;
-
 
 /*------------------------------------ Constants ----*/
 /*------------ Constants Stat boxes ------*/
@@ -24,17 +23,36 @@ const c = document.querySelector('#answer3');
 const d = document.querySelector('#answer4');
 const allAnswers = [a, b, c, d];
 
-/*------------- Const rewards --------*/
-const reward = 100;
-
-
-
-/*------------Function---------*/
-/*----------End Game function -----------*/
+//-------- Game over Const ----------*/
 const gameOverSum = document.getElementById('#gameOverSum');
 const gameOverScore = document.getElementById('#gameOverScore > h3');
 
+/*------------- Const rewards --------*/
+const reward = 100;
 
+/*------------Function---------*/
+/*--------------Update stats ---------*/
+// Code provided by my mentor Reuben Ferrante
+$('#usernameBox')[0].innerHTML += localStorage.getItem("username");
+// Code provided end!
+
+// ---- Update score
+function scoreBoard(score) {
+    scoreBox.innerHTML = "<h3>" + score + "</h3>"
+}
+
+function updateScore(score, reward) {
+    console.log(score + reward);
+}
+
+// ----- Update Wins
+
+function updateWins(wins) {
+    wins = parseInt(score) / 100;
+    winBox.innerHTML = "<h3>" + wins + "</h3>"
+//    console.log(score / 100);
+}
+/*----------End Game function -----------*/
 function endGame() {
    gameOverSum.classList.remove("invisible");
    gameboard.classList.add("invisible");
@@ -42,7 +60,6 @@ function endGame() {
 }
 
 /*--------- Display Questions and Answers ---------*/
-
 function dqa() {
     if (qNum == allQuestions.length) {
         console.log(qNum == allQuestions.length);
@@ -57,17 +74,26 @@ function dqa() {
         document.getElementById("answer4").innerHTML = "<h3>" + allQuestions[qNum].answers["d"] + "</h3>"
         console.log(qtext);
     }
-    
-  //  document.getElementById()
 }
 
-/*--------------Update stats ---------*/
-// Code provided by my mentor Reuben Ferrante
-$('#usernameBox')[0].innerHTML += localStorage.getItem("username");
-// Code provided end!
+/*------- Check answer and update score ---------*/
+function checkAnswer(letter, callback){
+    console.log(letter);
+    if(allQuestions[qNum].correct_answer == letter){
+        alert('You got it right!');
+        score += reward;
+        scoreBoard(score);
+        updateWins(wins);
+        qNum++;
+        dqa();
+    } else {
+        qNum++;
+        dqa();
+    }
+    callback(letter);
+    
+}
 
-/*----- cached element references -----*/
-/*----- event listeners -----*/
 /*---------------------- Questions and Answers--------*/
 const allQuestions = [
     {
@@ -171,45 +197,6 @@ const allQuestions = [
         correct_answer: "d"
     }
 ];
-
-
-
-/*------- Check answer and update score ---------*/
-
-function checkAnswer(letter, callback){
-    console.log(letter);
-    if(allQuestions[qNum].correct_answer == letter){
-        alert('You got it right!');
-        score += reward;
-        scoreBoard(score);
-        updateWins(wins);
-        qNum++;
-        dqa();
-    } else {
-        qNum++;
-        dqa();
-    }
-    callback(letter);
-    
-}
-
-//---------------Update stats ----------*/
-// ---- Update score
-function scoreBoard(score) {
-    scoreBox.innerHTML = "<h3>" + score + "</h3>"
-}
-
-function updateScore(score, reward) {
-    console.log(score + reward);
-}
-
-// ----- Update Wins
-
-function updateWins(wins) {
-    wins = parseInt(score) / 100;
-    winBox.innerHTML = "<h3>" + wins + "</h3>"
-//    console.log(score / 100);
-}
 
 /*-------------- Game Over -------------*/ 
 

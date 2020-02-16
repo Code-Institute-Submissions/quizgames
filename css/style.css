@@ -1,13 +1,9 @@
 body {
-    background-color: #fff;
+    background-color: #2b2d2f;
     color: #f0a90a;
 }
 
 /*------ Navbar Styling -------*/
-#text {
-    color: #f0a90a;
-}
-
 a {
     color: #f0a90a;
 }

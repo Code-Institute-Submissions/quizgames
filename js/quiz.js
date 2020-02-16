@@ -90,7 +90,7 @@ function checkAnswer(letter, callback){
         qNum++;
         dqa();
     }
-    callback(letter);
+    callback(letter, callback);
     
 }
 

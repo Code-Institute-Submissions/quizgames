@@ -1,16 +1,28 @@
 body {
-    background-color: #2b2d2f;
+    background-color: #fff;
     color: #f0a90a;
 }
 
 /*------ Navbar Styling -------*/
-a.navbar-brand {
+#text {
+    color: #f0a90a;
+}
+
+a {
+    color: #f0a90a;
+}
+
+a .navbar-dark .navbar-brand {
+    color: #f0a90a;
+}
+
+a.nav-link {
     color: #f0a90a;
 }
 
 /*-----------Background image------------*/
 .background-img {
-  background: url("/assets/images/cover.jpeg") no-repeat center center fixed; 
+  background: url("https://i.imgur.com/WJfRWbk.jpg") no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

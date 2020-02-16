@@ -11,12 +11,12 @@ The following project is my second Milestone project in the "Full stack Software
  in HTML, CSS, Bootstrap, .js, jQuery and so on. We got different scopes to choose from and again I chose one of
  my own. The site does not support any backend functionality so you will not need an account to test WishQuiz. 
 
- The project is a Quiz game and since it's a MVP it has minimal styleing and it's possible to play the game without
+ The project is a Quiz game and since it's a MVP it has minimal styling and it's possible to play the game without
  choosing a username, but the user if they like can choose a username and the username will be stored in 
  localStorage in the users browser. The game a small entertaining game where you in the future will be able to
  challenge friends and family, using WishQuiz database question's or they can add their own questions.   
 
- Link to the project: 
+ Link to the project: https://weekend79.github.io/quizgames/
 
  ### UX
  ---

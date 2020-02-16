@@ -30,6 +30,37 @@ const reward = 100;
 
 
 /*------------Function---------*/
+/*----------End Game function -----------*/
+const gameOverSum = document.getElementById('#gameOverSum');
+const gameOverScore = document.getElementById('#gameOverScore > h3');
+
+
+function endGame() {
+   gameOverSum.classList.remove("invisible");
+   gameboard.classList.add("invisible");
+   gameOverScore.innerHTML = "<h3>" + "Your score is:" + score + "</h3>";
+}
+
+/*--------- Display Questions and Answers ---------*/
+
+function dqa() {
+    if (qNum == allQuestions.length) {
+        console.log(qNum == allQuestions.length)
+        endGame();
+        
+    }
+    else {
+        qtext = document.getElementById("qtext");
+        qtext.innerHTML = "<h3>" + allQuestions[qNum].questions + "</h3>"
+        document.getElementById("answer1").innerHTML = "<h3>" + allQuestions[qNum].answers["a"] + "</h3>"
+        document.getElementById("answer2").innerHTML = "<h3>" + allQuestions[qNum].answers["b"] + "</h3>"
+        document.getElementById("answer3").innerHTML = "<h3>" + allQuestions[qNum].answers["c"] + "</h3>"
+        document.getElementById("answer4").innerHTML = "<h3>" + allQuestions[qNum].answers["d"] + "</h3>"
+        console.log(qtext);
+    }
+    
+  //  document.getElementById()
+}
 
 /*--------------Update stats ---------*/
 // Code provided by my mentor Reuben Ferrante
@@ -142,24 +173,9 @@ const allQuestions = [
     }
 ];
 
-/*--------- Display Questions and Answers ---------*/
 
-function dqa() {
-    qtext = document.getElementById("qtext");
-    qtext.innerHTML = "<h3>" + allQuestions[qNum].questions + "</h3>"
-    document.getElementById("answer1").innerHTML = "<h3>" + allQuestions[qNum].answers["a"] + "</h3>"
-    document.getElementById("answer2").innerHTML = "<h3>" + allQuestions[qNum].answers["b"] + "</h3>"
-    document.getElementById("answer3").innerHTML = "<h3>" + allQuestions[qNum].answers["c"] + "</h3>"
-    document.getElementById("answer4").innerHTML = "<h3>" + allQuestions[qNum].answers["d"] + "</h3>"
-
-    console.log(qtext);
-  //  document.getElementById()
-
-}
 
 /*------- Check answer and update score ---------*/
-
-
 
 function checkAnswer(letter, callback){
     console.log(letter);
@@ -170,12 +186,12 @@ function checkAnswer(letter, callback){
         updateWins(wins);
         qNum++;
         dqa();
-        gameOver();
     } else {
         qNum++;
         dqa();
     }
     callback(letter);
+    
 }
 
 //---------------Update stats ----------*/
@@ -193,26 +209,9 @@ function updateScore(score, reward) {
 function updateWins(wins) {
     wins = parseInt(score) / 100;
     winBox.innerHTML = "<h3>" + wins + "</h3>"
-    console.log(score / 100);
+//    console.log(score / 100);
 }
 
 /*-------------- Game Over -------------*/ 
-const gameOverSum = document.querySelector('#gameOverSum');
-const gameOverScore = document.querySelector('#gameOverScore');
 
-function endGame() {
-   gameOverSum.classList.remove("hidden");
-   gameboard.classList.add("hidden");
-   gameOverScore.innerHTML = "<h3>" + "Your score is:" + score + "</h3>";
-}
 
-var qMax = 10;
-
-function gameOver() {
-     if (allQuestions[qNum].questions === questions - 1) {
-        endGame();
-    } else {
-        qNum++;
-        dqa();
-    }
-}

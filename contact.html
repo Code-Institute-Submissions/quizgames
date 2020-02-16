@@ -17,44 +17,45 @@
 </head>
 
 <body>
-	<section id="top-secion" class="background-img">
+	<section id="top-secion" class="background-size">
 		<!-- Navbar from Bootstrap -->
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-			<a class="navbar-brand" href="#">WishQuiz.com</a>
+			<a class="navbar-brand" href="index.html">WishQuiz.com</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 			<div class="collapse navbar-collapse" id="navbarNav">
 				<ul class="navbar-nav ml-auto">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
 					</li>
 					<li class="nav-item">
 						<a class="nav-link" href="how-to-play.html">How to play</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">Contact</a>
+						<a class="nav-link" href="contact.html">Contact</a>
 					</li>
 				</ul>
 			</div>
 		</nav>
-		<div class="container">
-			<div id="quiz-board" class="col-8 offset-2 bg-dark">
-				<h1 class="how-text">Welcome to WishQuiz!</h1>
-				<h3 class="how-text">Get yourself a username and try our quiz game...</h3>
-				<input id="username" type="text" name="username" required value="" class="form-control box-styling" placeholder="Username" aria-label="username" aria-describedby="basic-addon1">
-				<a href="quiz.html">
-					<button class="col-4 offset-4 button-send" id="button-send" type="multiStorage" onclick="localStorage.getItem('');"><h5>Play</h5></button></a>
-			</div>
 	</section>
 	<section id="mid-section">
+		<div class="container">
+			<div id="form-style">
+				<h3>Please contact us by using the form below</h3>
+				<div>
+					<input type="text" class="form-control" placeholder="Name">
+					<input type="text" class="form-control" placeholder="E-mail">
+					<textarea class="form-control" rows="10" placeholder="Your message here..."></textarea>
 
 
-
+					<button id="bt-style" type="button" class="btn btn-primary btn-lg mx-auto">Submit</button>
+				</div>
+			</div>
+			<!-- Code from Bootstrap ended -->
+		</div>
 
 	</section>
-	<div id="data"></div>
-
 	<footer>
 		<div class="panel-heading">
 			<h3 class="panel-title">WishQuiz.com</h3>
@@ -74,19 +75,21 @@
 								<p>Choose a username and start playing!</p>
 							</div>
 							<div class="col-sm-6">
+								<h3>Social Media / GitHub icons</h3><br>
 								<div class="row">
 									<div class="col-sm-4">
 										<a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-										
+
 									</div>
 
 									<div class="col-sm-4">
-                                    <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
-										
+										<a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+
 									</div>
-                                    <div class="col-sm-4">
-                                    <a href="https://github.com/weekend79" target="_blank"><i class="fa fa-github"></i></a>
-										
+									<div class="col-sm-4">
+										<a href="https://github.com/weekend79"
+											target="_blank"><i class="fa fa-github"></i></a>
+
 									</div>
 
 								</div>
@@ -96,8 +99,8 @@
 						<!-- Code from Bootstrap ended -->
 
 						<div class="panel-body">
-							<a class="uppercase" href="#">Home</a>
-							<a class="uppercase" href="#">How to play</a>
+							<a class="uppercase" href="#">Home -</a>
+							<a class="uppercase" href="#">How to play -</a>
 							<a class="uppercase" href="#">Contact</a>
 							<div>
 

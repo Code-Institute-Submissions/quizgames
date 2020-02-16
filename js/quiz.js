@@ -45,9 +45,8 @@ function endGame() {
 
 function dqa() {
     if (qNum == allQuestions.length) {
-        console.log(qNum == allQuestions.length)
+        console.log(qNum == allQuestions.length);
         endGame();
-        
     }
     else {
         qtext = document.getElementById("qtext");

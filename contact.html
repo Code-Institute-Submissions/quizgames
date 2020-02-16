@@ -14,6 +14,12 @@
 		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
 	<!-- Custom css-->
 	<link rel="stylesheet" href="css/style.css">
+	<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_1ltJOBBC37Lugb4qOH0TS");
+   })();
+</script>
 </head>
 
 <body>
@@ -43,14 +49,14 @@
 		<div class="container">
 			<div id="form-style">
 				<h3>Please contact us by using the form below</h3>
-				<div>
-					<input type="text" class="form-control" placeholder="Name">
-					<input type="text" class="form-control" placeholder="E-mail">
+				<form onsubmit="return sendMail(this);" method="POST">
+					<input type="text" name="name" class="form-control" placeholder="Name" id="fullname" required>
+					<input type="text" name="emailaddress" class="form-control" id="emailaddress" placeholder="E-mail" required>
 					<textarea class="form-control" rows="10" placeholder="Your message here..."></textarea>
 
 
-					<button id="bt-style" type="button" class="btn btn-primary btn-lg mx-auto">Submit</button>
-				</div>
+					<button id="bt-style" type="submit" class="btn btn-primary btn-lg mx-auto">Submit</button>
+				</form>
 			</div>
 			<!-- Code from Bootstrap ended -->
 		</div>
@@ -99,9 +105,9 @@
 						<!-- Code from Bootstrap ended -->
 
 						<div class="panel-body">
-							<a class="uppercase" href="#">Home -</a>
-							<a class="uppercase" href="#">How to play -</a>
-							<a class="uppercase" href="#">Contact</a>
+							<a class="uppercase" href="index.html">Home -</a>
+							<a class="uppercase" href="how-to-play.html">How to play -</a>
+							<a class="uppercase" href="contact.html">Contact</a>
 							<div>
 
 								<i class="fa fa-copyright"></i>
@@ -124,7 +130,7 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
 	</script>
 	<!-- main js script -->
-	<script src="js/main.js"></script>
+	<script src="js/sendEmail.js"></script>
 
 </body>
 

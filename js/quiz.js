@@ -164,7 +164,7 @@ const allQuestions = [
         questions: "Where do you put the page title in the HTML structure?",
         answers: {
             a: "Footer",
-            b: "No possible",
+            b: "Not possible",
             c: "Body",
             d: "Head"
         },

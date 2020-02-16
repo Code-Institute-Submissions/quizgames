@@ -49,7 +49,7 @@ The footer provides some basic information about the game as well as links to so
 ---
 #### Current Features
 ---
-```should
+```sh 
 * Index - The user will find a username box and a play button that directs them to the game.
 * Quiz - The gameboard where the user get to answer 10 questions. 
 * How to Play - A static page with information on how to play the game.
@@ -86,6 +86,7 @@ The automatic checks of my HTML and CSS structure were done in [W3C Validator](h
 
 ### Bugs
 ---
+One of the bugs is that you get is an error respons code of 501, when trying to use the contact form. 
 During the development and testing of the code there have been constantly done improvments to the code to get it up and running, though I have even just started to scratch the surface of Javascript jQuery with more,
 it's been a real eye opener on what you can acomplish using .js and more. The learning curve have been raising rapidly in the end of 
 the project and I have received a lot of help from tutor support at CI. They have been brilliant guiding me and helping me throuhout the project together with my mentor.

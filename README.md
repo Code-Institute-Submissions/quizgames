@@ -48,7 +48,7 @@ The footer provides some basic information about the game as well as links to so
 
 ### How-to-play.html
 ![](assets/images/how-to-play-desk.png)
-![](assets/images/how to play-mobile.png)
+![](assets/images/how-to-play-mobile.png)
 
 ### contact.html
 ![](assets/images/contact-desk.png)

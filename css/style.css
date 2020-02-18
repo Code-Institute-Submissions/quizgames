@@ -4,17 +4,7 @@ body {
 }
 
 /*------ Navbar Styling -------*/
-a {
-    color: #f0a90a;
-}
 
-a .navbar-dark .navbar-brand {
-    color: #f0a90a;
-}
-
-a.nav-link {
-    color: #f0a90a;
-}
 
 /*-----------Background image------------*/
 .background-img {
@@ -30,6 +20,11 @@ a.nav-link {
 /*---------------- Game Board styling ----*/
 .invisible {
   display: none;
+}
+
+a button.col-4.offset-4.button-send {
+    padding-left: 0;
+    padding-right: 0;
 }
 
 .box-styling {
@@ -112,8 +107,6 @@ div#quiz-board {
 /*-------------Footer --------------*/
 div.panel-heading {
     height: 75px;
-
-    
 }
 
 .panel-title {
@@ -154,6 +147,11 @@ h3.panel-title {
 
 a.uppercase {
      color: #f0a90a; 
+}
+
+div.col-xs-12.col-lg-4 {
+    padding-top: 4%;
+    padding-bottom: 4%
 }
 
 i.fa.fa-facebook {
@@ -214,3 +212,21 @@ button#bt-style {
 #form-style {
     padding-top: 5%;
 }
+
+/*---------Quiz Board ---------*/
+#usernameBox {
+    padding-left: 0;
+    padding-right: 0;
+    text-align: center;
+}
+
+div#game_bord_inner{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+button#button-send.col-4.button-send {
+    padding-left: 0;
+    padding-right: 0;
+}
+

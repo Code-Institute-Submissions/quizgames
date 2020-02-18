@@ -25,7 +25,7 @@ const allAnswers = [a, b, c, d];
 
 //-------- Game over Const ----------*/
 const gameOverSum = document.querySelector('#gameOverSum');
-const gameOverScore = document.querySelector('#gameOverScore > h3');
+// const gameOverScore = document.querySelector('#gameOverScore > h3');
 
 /*------------- Const rewards --------*/
 const reward = 100;
@@ -49,14 +49,14 @@ function updateScore(score, reward) {
 
 function updateWins(wins) {
     wins = parseInt(score) / 100;
-    winBox.innerHTML = "<h3>" + wins + "</h3>"
+    winBox.innerHTML = "<h4>" + wins + "</h4>"
 //    console.log(score / 100);
 }
 /*----------End Game function -----------*/
 function endGame() {
    gameOverSum.classList.remove("invisible");
    gameboard.classList.add("invisible");
-   gameOverScore.innerHTML = score;
+//   gameOverScore.innerText = "<h4>" + score + "</h4>";
 }
 
 /*--------- Display Questions and Answers ---------*/
@@ -67,17 +67,17 @@ function dqa() {
     }
     else {
         qtext = document.getElementById("qtext");
-        qtext.innerHTML = "<h3>" + allQuestions[qNum].questions + "</h3>"
-        document.getElementById("answer1").innerHTML = "<h3>" + allQuestions[qNum].answers["a"] + "</h3>"
-        document.getElementById("answer2").innerHTML = "<h3>" + allQuestions[qNum].answers["b"] + "</h3>"
-        document.getElementById("answer3").innerHTML = "<h3>" + allQuestions[qNum].answers["c"] + "</h3>"
-        document.getElementById("answer4").innerHTML = "<h3>" + allQuestions[qNum].answers["d"] + "</h3>"
+        qtext.innerHTML = "<h4>" + allQuestions[qNum].questions + "</h4>"
+        document.getElementById("answer1").innerHTML = "<h4>" + allQuestions[qNum].answers["a"] + "</h4>"
+        document.getElementById("answer2").innerHTML = "<h4>" + allQuestions[qNum].answers["b"] + "</h4>"
+        document.getElementById("answer3").innerHTML = "<h4>" + allQuestions[qNum].answers["c"] + "</h4>"
+        document.getElementById("answer4").innerHTML = "<h4>" + allQuestions[qNum].answers["d"] + "</h4>"
     //    console.log(qtext);
     }
 }
 
 /*------- Check answer and update score ---------*/
-function checkAnswer(letter, callback){
+function checkAnswer(letter){
     console.log(letter);
     if(allQuestions[qNum].correct_answer == letter){
         alert('You got it right!');
@@ -90,7 +90,6 @@ function checkAnswer(letter, callback){
         qNum++;
         dqa();
     }
-    callback(letter, callback);
     
 }
 

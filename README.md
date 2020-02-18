@@ -42,7 +42,25 @@ their name, their e-mail id and subject and a message.
 
 The footer provides some basic information about the game as well as links to sosical media and GitHub. 
 
-### Images of how the page should look like. 
+### index.html
+![](assets/images/home-desk.png)
+![](assets/images/home-mobile.png)
+
+### How-to-play.html
+![](assets/images/how-to-play-desk.png)
+![](assets/images/how to play-mobile.png)
+
+### contact.html
+![](assets/images/contact-desk.png)
+![](assets/images/contact-mobile.png)
+
+### quiz.html
+![](assets/images/gameboard-desk.png)
+![](assets/images/gameboard-mobile.png) 
+
+### quiz.html
+![](assets/images/gameover-desk.png)
+![](assets/images/gameover-mobile.png) 
 
 
 ### Features
@@ -60,6 +78,7 @@ The footer provides some basic information about the game as well as links to so
 ---
 ```sh 
 * Both norwegain and english language
+* Highscore
 * User account with login 
 * App for the user to download
 * Network game where it will be possible to challenge friends and family.
@@ -76,7 +95,8 @@ Below is a list of technologies I've used to build my website and quiz game.
 * [Git](https://git-scm.com) - Git was used for version control and pushing the code to GitHub
 * [GitHub](https://github.com/) - This is where my repository is held externally.
 * [Javascript/JQuery](https://jquery.com/) - This was imported via the Bootstrap framework to enable me to create a responsive collapsible nav bar at smaller screen sizes JavaScript has also been used to develop the game.
-* [Font Awesome](https://fontawesome.com/) - I used Font Awesome for the icons in my navbar and the buttons on my index page. .
+* [Font Awesome](https://fontawesome.com/) - I used Font Awesome for the icons in my navbar and the buttons on my index page. 
+* [Imgur](https://imgur.com/) - I used Imgur to store my picture's that I've used on my site..
 
 
 ### Testing
